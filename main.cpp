@@ -2,7 +2,7 @@
 //  main.cpp
 //  Dz 1
 //
-//  Created by Max Pasechnik on 01.05.2022.
+//  Created by Vadim Pasechnik on 01.05.2022.
 //use Destructor for delete and constructor for names and data for persons
 //class*= new class()
 
