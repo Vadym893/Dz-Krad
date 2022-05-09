@@ -31,6 +31,7 @@ void Start(){
 
 void MainPart(){
     vector<string> database;
+    vector<int> Idbase;
     string username;
     string userSurName;
     string UserAge;
@@ -41,7 +42,7 @@ void MainPart(){
     random_device random_device;
     mt19937 generator(random_device());
     uniform_int_distribution<> Id(100000,999999);
-    string UserId= to_string(Id(generator));
+  
     Start();
     switch(StartSwitch){
         case 1:
@@ -62,7 +63,7 @@ void MainPart(){
                     cout << "please enter  age :";
                     cin >> UserAge;
             cout<<""<<endl;
-                                fullName= username + " " + userSurName +  " " + UserAge + " " +UserId;
+                                fullName= username + " " + userSurName +  " " + UserAge + " " + to_string(Id(generator));
                                   database.push_back(fullName);
             Menu1:
             cout<<"Press 1 to check all info"<<endl;
@@ -76,7 +77,7 @@ void MainPart(){
                     cout<<""<<endl;
                     cout << "number of users in array:" << CountNum << endl;
                     cout<<""<<endl;
-                    cout << "name of users in array " << endl;
+                    cout << "name of users in array: " << endl;
                                     for(int i = 0; i < database.size() ; i++){
                                         cout << i << " " << database[i] <<  " " << endl; ;
 
@@ -122,7 +123,7 @@ void MainPart(){
                             cin >> UserAge;
                     
                     cout<<""<<endl;
-                                        fullName= username + " " + userSurName +  " " + UserAge + " " +UserId;
+                                        fullName= username + " " + userSurName +  " " + UserAge + " " + to_string(Id(generator));
                                           database.push_back(fullName);
                             goto Menu1;
                     
